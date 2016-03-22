@@ -27,8 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Вкажіть, що у Вас не працює:"
-        android:textAlignment="center"
+        android:text="@string/not_working"
         android:id="@+id/textView" />
 
     <LinearLayout
@@ -37,14 +36,14 @@
         android:layout_below="@id/textView"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_marginTop="10dp">
 
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Не включається котел"
+            android:text="@string/not_working_kotel"
             android:id="@+id/checkBox"
-            android:layout_column="0"
             android:checked="false" />
     </LinearLayout>
 
@@ -59,9 +58,8 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Не гріє опалення"
+            android:text="@string/not_working_opalennya"
             android:id="@+id/checkBox2"
-            android:layout_column="0"
             android:checked="false" />
     </LinearLayout>
 
@@ -76,9 +74,8 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Не має гарячої води"
+            android:text="@string/not_working_hotwater"
             android:id="@+id/checkBox3"
-            android:layout_column="0"
             android:checked="false" />
     </LinearLayout>
 
@@ -93,9 +90,8 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Не працює кондиціонер"
+            android:text="@string/not_working_kondecioner"
             android:id="@+id/checkBox4"
-            android:layout_column="0"
             android:checked="false" />
     </LinearLayout>
 
@@ -110,16 +106,15 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Не працюють гаражні ворота чи автоматика"
+            android:text="@string/not_working_vorota"
             android:id="@+id/checkBox5"
-            android:layout_column="0"
             android:checked="false" />
     </LinearLayout>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Відправити дані"
+        android:text="@string/send_botton"
         android:id="@+id/button"
         android:layout_below="@+id/linearLayoutCheckBoxVorota"
         android:layout_alignParentLeft="true"
