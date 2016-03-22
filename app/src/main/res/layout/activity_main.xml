@@ -111,7 +111,7 @@
             android:checked="false" />
     </LinearLayout>
 
-    <Button
+    <Button style="@style/AppTheme"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/send_botton"
@@ -130,28 +130,28 @@
         android:gravity="center"
         android:layout_marginTop="10dp">
 
-        <Button
+        <Button style="@style/AppTheme"
             android:background="@drawable/fb_logo"
             android:onClick="facebook"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="10dp" />
 
-        <Button
+        <Button style="@style/AppTheme"
             android:background="@drawable/tw_logo"
             android:onClick="twitter"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="10dp" />
 
-        <Button
+        <Button style="@style/AppTheme"
             android:background="@drawable/instagram_logo"
             android:onClick="instagram"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="10dp" />
 
-        <Button
+        <Button style="@style/AppTheme"
             android:background="@drawable/yb_logo"
             android:onClick="youtube"
             android:layout_width="50dp"
