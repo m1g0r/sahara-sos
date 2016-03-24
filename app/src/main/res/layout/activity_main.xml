@@ -30,75 +30,21 @@
         android:text="@string/not_working"
         android:id="@+id/textView" />
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:id="@+id/linearLayoutCheckBoxKotel"
-        android:layout_below="@id/textView"
+    <EditText
+        android:id="@+id/smsBody"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="10dp">
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/not_working_kotel"
-            android:id="@+id/checkBox"
-            android:checked="false" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:id="@+id/linearLayoutCheckBoxOpalennya"
-        android:layout_below="@id/linearLayoutCheckBoxKotel"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:gravity="center">
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/not_working_opalennya"
-            android:id="@+id/checkBox2"
-            android:checked="false" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:id="@+id/linearLayoutCheckBoxHotwater"
-        android:layout_below="@id/linearLayoutCheckBoxOpalennya"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:gravity="center">
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/not_working_hotwater"
-            android:id="@+id/checkBox3"
-            android:checked="false" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:id="@+id/linearLayoutCheckBoxKondecioner"
-        android:layout_below="@id/linearLayoutCheckBoxHotwater"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:gravity="center">
-
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/not_working_kondecioner"
-            android:id="@+id/checkBox4"
-            android:checked="false" />
-    </LinearLayout>
+        android:layout_below="@+id/textView"
+        android:gravity="top"
+        android:hint="@string/message"
+        android:inputType="textMultiLine"
+        android:lines="5"
+        android:layout_marginTop="10dp"/>
 
     <LinearLayout
         android:orientation="horizontal"
         android:id="@+id/linearLayoutCheckBoxVorota"
-        android:layout_below="@id/linearLayoutCheckBoxKondecioner"
+        android:layout_below="@id/smsBody"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:gravity="center">
@@ -106,7 +52,7 @@
         <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/not_working_vorota"
+            android:text="@string/client"
             android:id="@+id/checkBox5"
             android:checked="false" />
     </LinearLayout>
