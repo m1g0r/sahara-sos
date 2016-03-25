@@ -26,6 +26,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+    /*
+        if ((checkbox).isChecked()) {
+            checkbox = (CheckBox) findViewById(R.id.checkBox);
+        }
+        else
+        {
+            checkbox = null;
+        }
+    }
+    */
+
         sendBtn = (Button) findViewById(R.id.sendSMS);
         txtphoneNo = (TextView) findViewById(R.id.phone);
         txtMessage = (EditText) findViewById(R.id.smsBody);
@@ -39,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     protected void sendSMSMessage() {
+
         Log.i("Send SMS", "");
         String phoneNo = txtphoneNo.getText().toString();
         String message = txtMessage.getText().toString() + " - " + checkbox.getText().toString();
@@ -51,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         catch (Exception e) {
-            Toast.makeText(getApplicationContext(), "Помилка", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Помилка відправлення", Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
     }
