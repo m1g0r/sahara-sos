@@ -47,11 +47,11 @@ public class MainActivity extends AppCompatActivity {
         try {
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(phoneNo, null, message, null, null);
-            Toast.makeText(getApplicationContext(), "SMS sent.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Запит відправлено", Toast.LENGTH_LONG).show();
         }
 
         catch (Exception e) {
-            Toast.makeText(getApplicationContext(), "SMS faild, please try again.", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Помилка", Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
     }
