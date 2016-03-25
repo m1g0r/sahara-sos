@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     protected void sendSMSMessage() {
         Log.i("Send SMS", "");
         String phoneNo = txtphoneNo.getText().toString();
-        String message = txtMessage.getText().toString();
+        String message = txtMessage.getText().toString() + checkbox.getText().toString();
 
         try {
             SmsManager smsManager = SmsManager.getDefault();
