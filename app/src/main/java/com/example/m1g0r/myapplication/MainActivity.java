@@ -26,18 +26,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-    /*
-        if ((checkbox).isChecked()) {
-            checkbox = (CheckBox) findViewById(R.id.checkBox);
-        }
-        else
-        {
-            checkbox = null;
-        }
-    }
-    */
-
         sendBtn = (Button) findViewById(R.id.sendSMS);
         txtphoneNo = (TextView) findViewById(R.id.phone);
         txtMessage = (EditText) findViewById(R.id.smsBody);
@@ -56,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
 
         Log.i("Send SMS", "");
         String phoneNo = txtphoneNo.getText().toString();
-        String message = txtMessage.getText().toString() + " - " + checkbox.getText().toString();
+        String message = txtMessage.getText().toString() + (checkbox.isChecked() ?
+                (" - " + checkbox.getText().toString()) : "");
 
         try {
             SmsManager smsManager = SmsManager.getDefault();
