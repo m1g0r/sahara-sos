@@ -39,7 +39,8 @@
         android:hint="@string/message"
         android:inputType="textMultiLine"
         android:lines="5"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_style"/>
 
     <LinearLayout
         android:orientation="horizontal"
