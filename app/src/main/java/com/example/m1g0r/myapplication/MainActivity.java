@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.telephony.SmsManager;
 import android.util.Log;
+import android.view.Menu;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -59,6 +60,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /*
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+    */
 
     public void facebook(View view) {
         Intent facebookIntent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.facebook.com/sahara.com.ua"));
