@@ -50,11 +50,11 @@ public class MainActivity extends AppCompatActivity {
         try {
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(phoneNo, null, message, null, null);
-            Toast.makeText(getApplicationContext(), "Запит відправлено", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "СМС із запитом відправлено", Toast.LENGTH_LONG).show();
         }
 
         catch (Exception e) {
-            Toast.makeText(getApplicationContext(), "Помилка відправлення", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Помилка відправлення СМС", Toast.LENGTH_LONG).show();
             e.printStackTrace();
         }
     }

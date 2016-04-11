@@ -116,6 +116,7 @@
         android:gravity="center"
         android:layout_below="@+id/linearLayout"
         android:text="@string/phone"
-        android:id="@+id/phone" />
+        android:id="@+id/phone"
+        android:visibility="invisible"/>
 
 </RelativeLayout>

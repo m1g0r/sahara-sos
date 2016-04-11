@@ -5,4 +5,5 @@
     <string name="message">Введіть повідомлення</string>
     <string name="send_botton">Відправити дані</string>
     <string name="phone">+380673515655</string>
+    <string name="web">http://caxapa.ua</string>
 </resources>
