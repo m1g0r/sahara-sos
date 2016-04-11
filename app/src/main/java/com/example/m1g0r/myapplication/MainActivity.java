@@ -12,7 +12,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.telephony.SmsManager;
 import android.util.Log;
-import android.view.Menu;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -23,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     CheckBox checkbox;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -41,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    protected void sendSMSMessage() {
+    public void sendSMSMessage() {
 
         Log.i("Send SMS", "");
         String phoneNo = txtphoneNo.getText().toString();
@@ -60,13 +59,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-    */
 
     public void facebook(View view) {
         Intent facebookIntent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.facebook.com/sahara.com.ua"));
