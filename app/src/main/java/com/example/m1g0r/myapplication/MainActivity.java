@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.telephony.SmsManager;
 import android.util.Log;
+import android.view.Menu;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -79,5 +80,12 @@ public class MainActivity extends AppCompatActivity {
         Intent youtubeIntent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.youtube.com/channel/UCbm-QK0tyM4szL8T05HHYvg/videos"));
         startActivity(youtubeIntent);
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
 
 }
