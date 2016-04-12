@@ -13,6 +13,7 @@ import android.widget.Toast;
 import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -85,6 +86,27 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                Toast.makeText(getApplicationContext(),
+                        "You selected Settings VIEW", Toast.LENGTH_LONG).show();
+                return true;
+
+            case R.id.action_aboutus:
+                Toast.makeText(getApplicationContext(),
+                        "You selected About Us VIEW", Toast.LENGTH_LONG).show();
+                return true;
+
+            case R.id.action_contacts:
+                Toast.makeText(getApplicationContext(),
+                        "You selected Contacts VIEW", Toast.LENGTH_LONG).show();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 

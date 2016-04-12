@@ -2,21 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity" >
-
-    <item android:id="@+id/action_my_item"
-        android:title="@string/contacts"
-        android:orderInCategory="1"
-        app:showAsAction="ifRoom" />
+    tools:context=".MainActivity">
 
     <item android:id="@+id/action_settings"
         android:title="@string/settings"
+        android:orderInCategory="1"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_aboutus"
+        android:title="@string/about_us"
         android:orderInCategory="2"
         app:showAsAction="never" />
 
-    <item android:id="@+id/aboutus"
-        android:title="@string/about_us"
+    <item android:id="@+id/action_contacts"
+        android:title="@string/contacts"
         android:orderInCategory="3"
-        app:showAsAction="never" />
+        app:showAsAction="ifRoom" />
 
 </menu>
