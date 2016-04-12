@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         try {
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(phoneNo, null, message, null, null);
-            Toast.makeText(getApplicationContext(), "СМС із запитом відправлено", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "СМС із запитом відправлено в сервісну службу", Toast.LENGTH_LONG).show();
         }
 
         catch (Exception e) {
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -93,17 +93,17 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
             case R.id.action_settings:
                 Toast.makeText(getApplicationContext(),
-                        "You selected Settings VIEW", Toast.LENGTH_LONG).show();
+                        "Вибачте. Меню НАЛАШТУВАННЯ ще не активне", Toast.LENGTH_LONG).show();
                 return true;
 
             case R.id.action_aboutus:
                 Toast.makeText(getApplicationContext(),
-                        "You selected About Us VIEW", Toast.LENGTH_LONG).show();
+                        "Вибачте. Розділ ПРО КОМПАНІЮ ще не активний", Toast.LENGTH_LONG).show();
                 return true;
 
             case R.id.action_contacts:
                 Toast.makeText(getApplicationContext(),
-                        "You selected Contacts VIEW", Toast.LENGTH_LONG).show();
+                        "Відображення контактної інформації", Toast.LENGTH_LONG).show();
                 return true;
         }
         return super.onOptionsItemSelected(item);
