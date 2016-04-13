@@ -22,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
     EditText txtMessage;
     TextView txtphoneNo;
     CheckBox checkbox;
+    CheckBox checkbox_kotel;
+    CheckBox checkbox_water;
+    CheckBox checkbox_kondecioner;
+    CheckBox checkbox_vorota;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
         txtphoneNo = (TextView) findViewById(R.id.phone);
         txtMessage = (EditText) findViewById(R.id.smsBody);
         checkbox = (CheckBox) findViewById(R.id.checkBox);
+        checkbox_kotel = (CheckBox) findViewById(R.id.checkBoxKotel);
+        checkbox_water = (CheckBox) findViewById(R.id.checkBoxWater);
+        checkbox_kondecioner = (CheckBox) findViewById(R.id.checkBoxKondecioner);
+        checkbox_vorota = (CheckBox) findViewById(R.id.checkBoxVorota);
 
         sendBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
@@ -46,8 +54,16 @@ public class MainActivity extends AppCompatActivity {
 
         Log.i("Send SMS", "");
         String phoneNo = txtphoneNo.getText().toString();
-        String message = txtMessage.getText().toString() + (checkbox.isChecked() ?
+//        String message = txtMessage.getText().toString() + (checkbox.isChecked() ?
+//                (" - " + checkbox.getText().toString()) : "");
+
+        String message = (checkbox_kotel.isChecked() ?
+                (checkbox_kotel.getText().toString()) + " - " : "") + (checkbox_water.isChecked() ?
+                (checkbox_water.getText().toString()) + " - " : "") + (checkbox_kondecioner.isChecked() ?
+                (checkbox_kondecioner.getText().toString()) + " - " : "") + (checkbox_vorota.isChecked() ?
+                (checkbox_vorota.getText().toString()) + " - " : "") + txtMessage.getText().toString() + (checkbox.isChecked() ?
                 (" - " + checkbox.getText().toString()) : "");
+
 
         try {
             SmsManager smsManager = SmsManager.getDefault();

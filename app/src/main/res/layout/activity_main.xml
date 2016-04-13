@@ -14,8 +14,8 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/sahara_logo"
-        android:maxWidth="200dp"
+        android:src="@drawable/sahara_logo_hor"
+        android:maxWidth="250dp"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
         android:id="@+id/imageView"
@@ -28,17 +28,55 @@
         android:layout_below="@+id/imageView"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="@string/not_working"
-        android:id="@+id/textView" />
+        android:id="@+id/textView"
+        android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/Nowork"
+        android:layout_below="@id/textView"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kotel"
+            android:id="@+id/checkBoxKotel"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hotwater"
+            android:id="@+id/checkBoxWater"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kondecioner"
+            android:id="@+id/checkBoxKondecioner"
+            android:checked="false" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vorota"
+            android:id="@+id/checkBoxVorota"
+            android:checked="false" />
+
+    </LinearLayout>
 
     <EditText
         android:id="@+id/smsBody"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/Nowork"
         android:gravity="top"
         android:hint="@string/message"
         android:inputType="textMultiLine"
-        android:lines="4"
+        android:lines="3"
         android:layout_marginTop="10dp"
         android:background="@drawable/edit_text_style"
         android:textCursorDrawable="@null" />
