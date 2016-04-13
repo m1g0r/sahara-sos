@@ -118,12 +118,10 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.action_contacts:
-                Toast.makeText(getApplicationContext(),
-                        "Відображення контактної інформації", Toast.LENGTH_LONG).show();
-                return true;
+                Intent intent = new Intent(MainActivity.this, ContactusActivity.class);
+                startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
     }
-
 
 }
