@@ -58,10 +58,10 @@ public class MainActivity extends AppCompatActivity {
 //                (" - " + checkbox.getText().toString()) : "");
 
         String message = (checkbox_kotel.isChecked() ?
-                (checkbox_kotel.getText().toString()) + " - " : "") + (checkbox_water.isChecked() ?
-                (checkbox_water.getText().toString()) + " - " : "") + (checkbox_kondecioner.isChecked() ?
-                (checkbox_kondecioner.getText().toString()) + " - " : "") + (checkbox_vorota.isChecked() ?
-                (checkbox_vorota.getText().toString()) + " - " : "") + txtMessage.getText().toString() + (checkbox.isChecked() ?
+                (checkbox_kotel.getText().toString()) + ". " : "") + (checkbox_water.isChecked() ?
+                (checkbox_water.getText().toString()) + ". " : "") + (checkbox_kondecioner.isChecked() ?
+                (checkbox_kondecioner.getText().toString()) + ". " : "") + (checkbox_vorota.isChecked() ?
+                (checkbox_vorota.getText().toString()) + ". " : "") + txtMessage.getText().toString() + (checkbox.isChecked() ?
                 (" - " + checkbox.getText().toString()) : "");
 
 
