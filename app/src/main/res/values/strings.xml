@@ -12,11 +12,22 @@
     <string name="settings">Налаштування</string>
     <string name="about_us">Про компанію</string>
     <string name="contacts">Контакти</string>
-    <string name="contact_us">У лукоморья дуб зелёный;\n
-    Златая цепь на дубе том:\n
-    И днём и ночью <b>кот учёный</b>\n
-    Всё ходит по цепи кругом;\n
-    Идёт <b>направо</b> - песнь заводит,\n
-    <b>Налево</b> - сказку говорит.</string>
     <string name="contact_us_title">Контактна інформація</string>
+    <string name="kiev">Київ</string>
+    <string name="contact_kiev">
+        <b>вул. Новокостянтинівська, 1В</b>\n
+        тел. (044) 425-06-39\n
+        тел. (050) 434-93-03\n
+        info@sahara.com.ua\n
+    </string>
+    <string name="ternopil">Тернопіль</string>
+    <string name="contact_ternopil">
+        <b>вул. Коцюбинського, 6</b>\n
+        тел. (0352) 43-38-19\n
+        тел. (0352) 43-10-89\n
+        <i>Сервісний центр</i>\n
+        тел. (0352) 23-51-05\n
+        тел. 0673515655\n
+        тел. 0503391565\n
+        office@sahara.com.ua</string>
 </resources>
