@@ -24,6 +24,7 @@
         </activity>
 
         <activity android:name=".ContactusActivity"
+            android:theme="@style/AppTheme"
             android:label="@string/contact_us_title">
         </activity>
     </application>
