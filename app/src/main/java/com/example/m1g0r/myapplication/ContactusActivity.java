@@ -12,7 +12,6 @@ public class ContactusActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_contacts);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TabHost host = (TabHost)findViewById(R.id.tabHost);
