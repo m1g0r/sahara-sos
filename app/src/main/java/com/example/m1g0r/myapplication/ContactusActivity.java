@@ -3,7 +3,6 @@ package com.example.m1g0r.myapplication;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
-//import android.view.MenuItem;
 import android.widget.TabHost;
 
 public class ContactusActivity extends AppCompatActivity {
@@ -13,6 +12,8 @@ public class ContactusActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_contacts);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         TabHost host = (TabHost)findViewById(R.id.tabHost);
         host.setup();
@@ -42,14 +43,10 @@ public class ContactusActivity extends AppCompatActivity {
         return true;
     }
 
-/*    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
+    @Override
+    public boolean onSupportNavigateUp(){
+        finish();
+        return true;
+    }
 
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    } */
 }
