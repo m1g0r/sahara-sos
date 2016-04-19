@@ -1,12 +1,12 @@
 package com.example.m1g0r.myapplication;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
-import android.view.MenuItem;
+//import android.view.MenuItem;
 import android.widget.TabHost;
 
-public class ContactusActivity extends Activity {
+public class ContactusActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class ContactusActivity extends Activity {
         return true;
     }
 
-    @Override
+/*    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
@@ -51,5 +51,5 @@ public class ContactusActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    } */
 }
