@@ -18,8 +18,6 @@ public class ContactusActivity extends AppCompatActivity {
 
     SupportMapFragment mapFragment;
     GoogleMap map;
-    Marker marker;
-    float zoomLevel = 16;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +49,7 @@ public class ContactusActivity extends AppCompatActivity {
 //        google maps
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.kievmap);
         map = mapFragment.getMap();
-//        map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoomLevel));
+//        map.moveCamera(CameraUpdateFactory.newLatLngZoom(50.478867, 30.492193, 16));
         if (map == null) {
             finish();
             return;
