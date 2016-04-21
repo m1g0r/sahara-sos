@@ -2,23 +2,28 @@ package com.example.m1g0r.myapplication;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Menu;
 import android.widget.TabHost;
-import android.widget.Toast;
+import android.view.View;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+
 public class ContactusActivity extends AppCompatActivity {
+
+    SupportMapFragment mapFragment;
+    GoogleMap map;
+    Marker marker;
+    float zoomLevel = 16;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_contacts);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -42,6 +47,24 @@ public class ContactusActivity extends AppCompatActivity {
         spec.setContent(R.id.tab3);
         spec.setIndicator("Івано-Франківськ");
         host.addTab(spec);
+
+//        google maps
+        mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.kievmap);
+        map = mapFragment.getMap();
+//        map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, zoomLevel));
+        if (map == null) {
+            finish();
+            return;
+        }
+
+        init();
+
+    }
+
+    public void init() {
+        map.addMarker(new MarkerOptions()
+                .position(new LatLng(50.478867, 30.492193))
+                .title("САХАРА"));
     }
 
 
