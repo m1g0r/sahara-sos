@@ -33,13 +33,11 @@
                     android:orientation="vertical"
                     android:background="@drawable/lightgrey">
 
-                    <ImageView
+                    <fragment
+                        android:id="@+id/kievmap"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/sahara_tern"
-                        android:contentDescription="@string/kiev"
-                        android:layout_gravity="top"
-                        android:adjustViewBounds="true" />
+                        android:layout_height="200dp"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -66,13 +64,11 @@
                     android:orientation="vertical"
                     android:background="@drawable/lightgrey">
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/sahara_tern"
-                        android:contentDescription="@string/ternopil"
-                        android:layout_gravity="top"
-                        android:adjustViewBounds="true" />
+                    <fragment
+                        android:id="@+id/termap"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"/>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -99,13 +95,11 @@
                     android:orientation="vertical"
                     android:background="@drawable/lightgrey">
 
-                    <ImageView
+                    <fragment
+                        android:id="@+id/ifmap"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/sahara_tern"
-                        android:contentDescription="@string/frankivsk"
-                        android:layout_gravity="top"
-                        android:adjustViewBounds="true" />
+                        android:layout_height="200dp"/>
 
                     <TextView
                         android:layout_width="match_parent"

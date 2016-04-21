@@ -2,8 +2,16 @@ package com.example.m1g0r.myapplication;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.widget.TabHost;
+import android.widget.Toast;
+
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 public class ContactusActivity extends AppCompatActivity {
 
@@ -35,6 +43,7 @@ public class ContactusActivity extends AppCompatActivity {
         spec.setIndicator("Івано-Франківськ");
         host.addTab(spec);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
