@@ -13,31 +13,38 @@
     <string name="about_us">Про компанію</string>
     <string name="contacts">Контакти</string>
     <string name="contact_us_title">Контактна інформація</string>
-    <string name="kiev">м. Київ</string>
+    <string name="kiev"><b>м. Київ</b></string>
     <string name="contact_kiev">
-        <b>вул. Новокостянтинівська, 1В</b>\n
+        вул. Новокостянтинівська, 1В\n
         тел. (044) 425-06-39\n
         тел. (050) 434-93-03\n
-        info@sahara.com.ua\n
-        http://caxapa.ua
+        e-mail: info@sahara.com.ua\n
+        \n
+        <i><b>Сервісний центр</b></i>\n
+        тел. (050) 339-18-00\n
+        e-mail: yura@sahara.com.ua
     </string>
-    <string name="ternopil">м. Тернопіль</string>
+    <string name="ternopil"><b>м. Тернопіль</b></string>
     <string name="contact_ternopil">
-        <b>вул. Коцюбинського, 6</b>\n
+        вул. Коцюбинського, 6\n
         тел. (0352) 43-38-19\n
         тел. (0352) 43-10-89\n
-        <i>Сервісний центр</i>\n
+        e-mail: office@sahara.com.ua\n
+        \n
+        <i><b>Сервісний центр</b></i>\n
         тел. (0352) 23-51-05\n
-        тел. 0673515655\n
-        тел. 0503391565\n
-        office@sahara.com.ua\n
-        http://caxapa.ua
+        тел. (067) 351-56-55\n
+        тел. (050) 339-15-65\n
+        e-mail: service@sahara.com.ua
     </string>
-    <string name="frankivsk">м. Івано-Франківськ</string>
+    <string name="frankivsk"><b>м. Івано-Франківськ</b></string>
     <string name="contact_if">
-        <b>вул. Шопена, 9</b>\n
+        вул. Шопена, 9\n
         тел. (0342) 75-05-03\n
-        manko@sahara.com.ua\n
-        http://caxapa.ua
+        e-mail: manko@sahara.com.ua\n
+        \n
+        <i><b>Сервісний центр</b></i>\n
+        тел. (067) 351-34-00\n
+        e-mail: mariya.i@sahara.if.ua
     </string>
 </resources>
