@@ -49,7 +49,8 @@ public class ContactusActivity extends AppCompatActivity {
 //        google maps
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.kievmap);
         map = mapFragment.getMap();
-//        map.moveCamera(CameraUpdateFactory.newLatLngZoom(50.478867, 30.492193, 16));
+        LatLng latLng = new LatLng(50.478867, 30.492193);
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12));
         if (map == null) {
             finish();
             return;
