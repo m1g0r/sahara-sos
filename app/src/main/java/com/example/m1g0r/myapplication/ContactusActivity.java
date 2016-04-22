@@ -4,13 +4,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.widget.TabHost;
-import android.view.View;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 
@@ -49,8 +47,6 @@ public class ContactusActivity extends AppCompatActivity {
 //        google maps
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.kievmap);
         map = mapFragment.getMap();
-        LatLng latLng = new LatLng(50.478867, 30.492193);
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12));
         if (map == null) {
             finish();
             return;
@@ -61,9 +57,13 @@ public class ContactusActivity extends AppCompatActivity {
     }
 
     public void init() {
+        LatLng latLng = new LatLng(50.478867, 30.492193);
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12));
+        map.getUiSettings().setScrollGesturesEnabled(false);
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(50.478867, 30.492193))
-                .title("САХАРА"));
+                .title("САХАРА")
+                .draggable(false));
     }
 
 
