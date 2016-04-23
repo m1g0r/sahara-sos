@@ -127,6 +127,13 @@ public class MainActivity extends AppCompatActivity {
                 Intent contacts = new Intent(MainActivity.this, ContactusActivity.class);
                 startActivity(contacts);
                 return true;
+
+            case R.id.action_about_program:
+                if (item.isChecked()) item.setChecked(false);
+                else item.setChecked(true);
+                Intent aboutprogram = new Intent(MainActivity.this, AboutProgramActivity.class);
+                startActivity(aboutprogram);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
