@@ -108,18 +108,25 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_settings:
+                if (item.isChecked()) item.setChecked(false);
+                else item.setChecked(true);
                 Toast.makeText(getApplicationContext(),
                         "Вибачте. Меню НАЛАШТУВАННЯ ще не активне", Toast.LENGTH_LONG).show();
                 return true;
 
             case R.id.action_aboutus:
-                Toast.makeText(getApplicationContext(),
-                        "Вибачте. Розділ ПРО КОМПАНІЮ ще не активний", Toast.LENGTH_LONG).show();
+                if (item.isChecked()) item.setChecked(false);
+                else item.setChecked(true);
+                Intent aboutus = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(aboutus);
                 return true;
 
             case R.id.action_contacts:
-                Intent intent = new Intent(MainActivity.this, ContactusActivity.class);
-                startActivity(intent);
+                if (item.isChecked()) item.setChecked(false);
+                else item.setChecked(true);
+                Intent contacts = new Intent(MainActivity.this, ContactusActivity.class);
+                startActivity(contacts);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
