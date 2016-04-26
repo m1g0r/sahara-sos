@@ -52,16 +52,60 @@ public class ContactusActivity extends AppCompatActivity {
             return;
         }
 
-        init();
+        initkiev();
+
+        mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.termap);
+        map = mapFragment.getMap();
+        if (map == null) {
+            finish();
+            return;
+        }
+
+        initter();
+
+        mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.ifmap);
+        map = mapFragment.getMap();
+        if (map == null) {
+            finish();
+            return;
+        }
+
+        initif();
 
     }
 
-    public void init() {
+    public void initkiev() {
         LatLng latLng = new LatLng(50.478867, 30.492193);
+        map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12));
         map.getUiSettings().setScrollGesturesEnabled(false);
+        map.getUiSettings().setZoomControlsEnabled(true);
         map.addMarker(new MarkerOptions()
                 .position(new LatLng(50.478867, 30.492193))
+                .title("САХАРА")
+                .draggable(false));
+    }
+
+    public void initter() {
+        LatLng latLng = new LatLng(49.552370, 25.611009);
+        map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 13));
+        map.getUiSettings().setScrollGesturesEnabled(false);
+        map.getUiSettings().setZoomControlsEnabled(true);
+        map.addMarker(new MarkerOptions()
+                .position(new LatLng(49.552370, 25.611009))
+                .title("САХАРА")
+                .draggable(false));
+    }
+
+    public void initif() {
+        LatLng latLng = new LatLng(48.925674, 24.716019);
+        map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 13));
+        map.getUiSettings().setScrollGesturesEnabled(false);
+        map.getUiSettings().setZoomControlsEnabled(true);
+        map.addMarker(new MarkerOptions()
+                .position(new LatLng(48.925674, 24.716019))
                 .title("САХАРА")
                 .draggable(false));
     }
