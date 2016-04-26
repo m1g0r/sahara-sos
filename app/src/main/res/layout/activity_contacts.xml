@@ -30,8 +30,7 @@
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:background="@drawable/lightgrey">
+                    android:orientation="vertical">
 
                     <fragment
                         android:id="@+id/kievmap"
@@ -61,8 +60,7 @@
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:background="@drawable/lightgrey">
+                    android:orientation="vertical">
 
                     <fragment
                         android:id="@+id/termap"
@@ -92,8 +90,7 @@
                     android:id="@+id/tab3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:background="@drawable/lightgrey">
+                    android:orientation="vertical">
 
                     <fragment
                         android:id="@+id/ifmap"
