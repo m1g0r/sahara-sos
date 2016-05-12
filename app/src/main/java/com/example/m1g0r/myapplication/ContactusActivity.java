@@ -1,9 +1,12 @@
 package com.example.m1g0r.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.TabHost;
+import android.widget.Toast;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -101,7 +104,7 @@ public class ContactusActivity extends AppCompatActivity {
     public void initif() {
         LatLng latLng = new LatLng(48.925674, 24.716019);
         map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
-        map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12));
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 13));
         map.getUiSettings().setScrollGesturesEnabled(false);
         map.getUiSettings().setZoomControlsEnabled(true);
         map.addMarker(new MarkerOptions()
@@ -121,6 +124,40 @@ public class ContactusActivity extends AppCompatActivity {
     public boolean onSupportNavigateUp(){
         finish();
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.action_settings:
+                if (item.isChecked()) item.setChecked(false);
+                else item.setChecked(true);
+                Toast.makeText(getApplicationContext(),
+                        "Вибачте. Меню НАЛАШТУВАННЯ ще не активне", Toast.LENGTH_LONG).show();
+                return true;
+
+            case R.id.action_aboutus:
+                if (item.isChecked()) item.setChecked(false);
+                else item.setChecked(true);
+                Intent aboutus = new Intent(ContactusActivity.this, AboutActivity.class);
+                startActivity(aboutus);
+                return true;
+
+            case R.id.action_contacts:
+                if (item.isChecked()) item.setChecked(false);
+                else item.setChecked(true);
+                Intent contacts = new Intent(ContactusActivity.this, ContactusActivity.class);
+                startActivity(contacts);
+                return true;
+
+            case R.id.action_about_program:
+                if (item.isChecked()) item.setChecked(false);
+                else item.setChecked(true);
+                Intent aboutprogram = new Intent(ContactusActivity.this, AboutProgramActivity.class);
+                startActivity(aboutprogram);
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
 }
